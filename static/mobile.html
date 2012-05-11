@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Flashcard | Mobile</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+		<link href="mobile.css" rel="stylesheet" type="text/css">
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script src="jquery.swipe.js"></script>
+		<script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+		<script src="mobile.js"></script>
+		
+		<!--<script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script>-->
+		
+		<script type="template" id="template">
+			<div class="card">
+				<div class="front">
+					<div class="word">${w}</div>
+					<div class="pronunciation">${pro}</div>
+				</div>
+				<div class="back">
+					<div>
+						<span class="pos">${p}</span>
+						<div class="def">${d}</div>
+						<span class="extitle">Example</span>
+						<div class="example">${ex}</div>
+					</div>
+				</div>
+			</div>
+		</script>
+		
+	</head>
+	<body>
+		<div class="container">
+			
+		</div>
+	</body>
+</html>
