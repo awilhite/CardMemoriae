@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>Flashcard</title>
+	<script src="jquery-1.7.1.min.js"></script>
+	<script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+	<script src="main.js"></script>
+	<script type="template" id="template">
+		<div class="card">
+			<div class="front">
+				<div class="word">${w}</div>
+				<div class="pronunciation">${pro}</div>
+			</div>
+			<div class="back">
+				<div>
+					<span class="pos">${p}</span>
+					<div class="def">${d}</div>
+					<span class="extitle">Example</span>
+					<div class="example">${ex}</div>
+				</div>
+			</div>
+		</div>
+	</script>
+	<link href="main.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div class="container">
+			
+		</div>
+					
+		<div class="controls">
+			<input class="btn" id="knowit" value="I know it!" type="button">
+			<input class="btn" id="next" value="Next" type="button">
+		</div>
+	</body>
+</html>

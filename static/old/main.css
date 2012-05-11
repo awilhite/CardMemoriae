@@ -1,0 +1,160 @@
+body {
+	background: whiteSmoke;
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	overflow: hidden;
+}
+.container {
+	height: 400px;
+	margin: 0 auto 40px;
+	position: relative;
+	-webkit-perspective: 800px;
+	-moz-perspective: 800px;
+	-ms-perspective: 800px;
+	-o-perspective: 800px;
+	perspective: 800px;
+	margin-top: 200px;
+}
+
+.controls {
+	text-align: center;
+
+}
+
+.card {
+	width: 600px;
+	height: 400px;
+	border: 1px solid #CCC;
+	background: white;
+	position: absolute;
+	transform: translateX(-100%);
+	bottom: 0;
+	-webkit-transition: -webkit-transform 1s, left 200ms ease-out;
+	-moz-transition: -moz-transform 1s, left 200ms ease-out;
+	-ms-transition: -ms-transform 1s, left 200ms ease-out;
+	-o-transition: -o-transform 1s, left 200ms ease-out;
+	transition: transform 1s, left 200ms ease-out;
+
+	-webkit-transform-origin: top center;
+	-moz-transform-origin: top center;
+	-ms-transform-origin: top center;
+	-o-transform-origin: top center;
+	transform-origin: top center;
+}
+
+.card.flipped {
+	-webkit-transform: translateY( 100% ) rotateX( -180deg );
+	-moz-transform: translateY( 100% ) rotateX( -180deg );
+	-ms-transform: translateY( 100% ) rotateX( -180deg );
+	-o-transform: translateY( 100% ) rotateX( -180deg );
+	transform: translateY( 100% ) rotateX( -180deg );
+}
+
+.card > div {
+	display: block;
+	width: 600px;
+	height: 400px;
+	color: black;
+	position: absolute;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.card > .back > div {
+	padding: 50px;
+}
+
+.card > .back > div > .def {
+margin: 15px 0 30px 0px;
+}
+
+.card > .back > div > .pos, .extitle {
+	color: gray;
+}
+
+.card > .back > div > .example {
+	margin: 15px 0 30px 0;
+}
+
+.card .front .word {
+	line-height: 300px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 80px;
+}
+
+.card .front .pronunciation{
+	text-align: center;
+	font-size: 20px;
+}
+
+.card .back {
+	text-align: left;
+	font-size: 20px;
+	-webkit-transform: rotateX( 180deg );
+	-moz-transform: rotateX( 180deg );
+	-ms-transform: rotateX( 180deg );
+	-o-transform: rotateX( 180deg );
+	transform: rotateX( 180deg );
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 4px 10px 4px;
+  font-size: 13px;
+  line-height: 18px;
+  color: #333333;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  background-color: #fafafa;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(25%, #ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-image: -moz-linear-gradient(top, #ffffff, #ffffff 25%, #e6e6e6);
+  background-image: -ms-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-image: -o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+  border: 1px solid #ccc;
+  border-bottom-color: #bbb;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  *margin-left: .3em;
+}
+.btn:first-child {
+  *margin-left: 0;
+}
+.btn:hover {
+  color: #333333;
+  text-decoration: none;
+  background-color: #e6e6e6;
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -ms-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
+}
+.btn:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn.active, .btn:active {
+  background-image: none;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  background-color: #e6e6e6;
+  background-color: #d9d9d9 \9;
+  color: rgba(0, 0, 0, 0.5);
+  outline: 0;
+}
