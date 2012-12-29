@@ -1,1 +1,5 @@
 An algorithmic vocab study tool
+
+Built upon Google App Engine infrastructure.
+
+Uses Google Dictionary API
